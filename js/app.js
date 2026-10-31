@@ -577,9 +577,13 @@ placeGrips();
 for (const card of $("live").querySelectorAll(".card")) makeMovable(card);
 setAutoPause(autoPause);
 setChartMode(chartMode);
+// The address the page opened at is its own page for Google, so it doesn't take the languages for
+// copies of wattamax.com. Google opens wattamax.com in English, so /en is a copy of it.
+const address = location.pathname.slice(1);
+document.head.append(Object.assign(document.createElement("link"), { rel: "canonical", href: `https://wattamax.com/${LANGUAGES.includes(address) && address !== "en" ? address : ""}` }));
 // The language in the address first, as a link or a search result picked it, then the one this
 // browser kept, then the browser's own
-showLanguage([location.pathname.slice(1), load("language")].find((code) => LANGUAGES.includes(code)) ?? browserLanguage());
+showLanguage([address, load("language")].find((code) => LANGUAGES.includes(code)) ?? browserLanguage());
 reset();
 // What to do without Web Bluetooth, told for the browser at hand
 function noBluetoothMessage() {
