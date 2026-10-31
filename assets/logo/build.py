@@ -16,14 +16,14 @@ def inner(svg):
 
 
 def preview(icon_svg, wordmark_svg, w=1200, h=630, size=180):
-    """Link preview (og:image): the light icon above the wordmark, centred on the site's background.
+    """Link preview (og:image): the light icon above the wordmark, centred on white.
     They fit in the middle square, because Google crops the image to a square in its results."""
     ratio = float(wordmark_svg.split('viewBox="0 0 ')[1].split()[0]) / 100
     width = size * 2.2
     height = width / ratio
     gap = size / 4
     top = (h - size - gap - height) / 2
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}">\n<rect width="{w}" height="{h}" fill="#F5F5F7"/>\n'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}">\n<rect width="{w}" height="{h}" fill="#FFFFFF"/>\n'
             f'<svg x="{(w - size) / 2}" y="{top}" width="{size}" height="{size}" viewBox="0 0 100 100">\n{inner(icon_svg)}</svg>\n'
             f'<svg x="{(w - width) / 2}" y="{top + size + gap}" width="{width}" height="{height}" viewBox="0 0 {ratio * 100} 100">\n'
             f'{inner(wordmark_svg)}</svg>\n</svg>\n')
