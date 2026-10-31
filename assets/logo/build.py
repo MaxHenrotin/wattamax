@@ -15,14 +15,16 @@ def inner(svg):
     return "".join(svg.splitlines(keepends=True)[2:-1])
 
 
-def preview(icon_svg, wordmark_svg, w=1200, h=630, size=160):
-    """Link preview (og:image): the light icon and the wordmark, centred on the site's background."""
+def preview(icon_svg, wordmark_svg, w=1200, h=630, size=120):
+    """Link preview (og:image): the light icon and the wordmark, centred on the site's background.
+    They fit in the middle square, because Google crops the image to a square in its results."""
     ratio = float(wordmark_svg.split('viewBox="0 0 ')[1].split()[0]) / 100
     height = size * 0.45
-    left = (w - size - 40 - height * ratio) / 2
+    gap = size / 4
+    left = (w - size - gap - height * ratio) / 2
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}">\n<rect width="{w}" height="{h}" fill="#F5F5F7"/>\n'
             f'<svg x="{left}" y="{(h - size) / 2}" width="{size}" height="{size}" viewBox="0 0 100 100">\n{inner(icon_svg)}</svg>\n'
-            f'<svg x="{left + size + 40}" y="{(h - height) / 2}" width="{height * ratio}" height="{height}" viewBox="0 0 {ratio * 100} 100">\n'
+            f'<svg x="{left + size + gap}" y="{(h - height) / 2}" width="{height * ratio}" height="{height}" viewBox="0 0 {ratio * 100} 100">\n'
             f'{inner(wordmark_svg)}</svg>\n</svg>\n')
 
 
