@@ -50,7 +50,7 @@ The page relies on Web Bluetooth, and only Chromium-based browsers implement it.
 2. Pedal for a few seconds to wake the trainer up.
 3. Open [wattamax.com](https://wattamax.com), click **Connect your trainer** and pick your trainer in the list.
 4. Start pedalling. The clock starts with your first pedal stroke.
-5. Hold **Hold to finish** for 2 seconds when you're done. Holding the button replaces a confirmation dialog, so a stray click can't end your ride.
+5. Hold **Hold to finish** for 1.5 seconds when you're done. Holding the button replaces a confirmation dialog, so a stray click can't end your ride.
 
 The two fields at the top hold your weight and FTP (the power you can hold for about an hour), set to 75 kg and 200 W until you enter your own. Your weight gives watts per kilo and feeds the speed simulation. Your FTP sets the zones, from Z1 (recovery) to Z7 (sprint). Both fields pulse red until you fill them, and if you empty one, whatever depends on it disappears. Your browser remembers both, along with the two switches.
 

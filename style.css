@@ -61,7 +61,8 @@ body {
 .top > [data-nosnippet] { display: contents; }
 h1 { display: flex; align-items: center; gap: 10px; margin: 0 auto 0 0; }
 h1 img { display: block; }
-.brand { display: flex; align-items: center; gap: 10px; padding: 0; border: 0; background: none; cursor: pointer; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 0; border: 0; background: none; cursor: pointer; transition: transform 0.15s; }
+.brand:active { transform: scale(0.95); }
 .pill { display: flex; align-items: center; gap: 8px; min-height: 38px; padding: 6px 14px; border-radius: 999px; background: var(--card); box-shadow: var(--shadow); font-size: 14px; color: var(--ink); }
 .pill input { width: 4.2em; padding: 4px 8px; border: 0; border-radius: 8px; background: var(--fill); font: inherit; font-weight: 600; color: var(--ink); text-align: right; -moz-appearance: textfield; }
 .pill input::placeholder { color: var(--tertiary); }
@@ -291,12 +292,12 @@ a.button { text-decoration: none; }
 body[data-screen="summary"] .live-only { display: none; }
 body[data-screen="summary"] .dot { display: none; }
 
-/* Hold-to-confirm: the ring fills over 2 seconds while the button is held */
-.ring { flex: none; width: 20px; height: 20px; transform: rotate(-90deg); }
+/* Hold-to-confirm: the ring fills over 1.5 seconds while the button is held */
+.ring { flex: none; width: 26px; height: 26px; transform: rotate(-90deg); }
 .ring circle { fill: none; stroke: currentColor; stroke-width: 2.5; }
 .ring circle:first-child { opacity: 0.3; }
 .ring .progress { stroke-linecap: round; stroke-dasharray: 50.3; stroke-dashoffset: 50.3; transition: stroke-dashoffset 0.25s ease-out; }
-.hold.holding .progress { stroke-dashoffset: 0; transition: stroke-dashoffset 2s linear; }
+.hold.holding .progress { stroke-dashoffset: 0; transition: stroke-dashoffset 1.5s linear; }
 
 /* Readings fade while the ride is paused, so a glance is enough to see it */
 #live .figures, #live .totals dl { transition: opacity 0.3s; }

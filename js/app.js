@@ -7,7 +7,7 @@ import { DRAWINGS, SUPPORT } from "./route.js";
 import { HeartRateMonitor, Trainer } from "./sensors.js";
 import { ZONES, zoneIndex, zoneTimes } from "./zones.js";
 
-const HOLD_TIME = 2000;  // ms, the same as the ring animation in style.css
+const HOLD_TIME = 1500;  // ms, the same as the ring animation in style.css
 const BUCKET = 5;        // seconds of riding behind each bar of the live chart
 const LIVE_BARS = 120;   // 10 minutes of 5-second bars
 const MAX_BARS = 120;    // whole-ride charts merge bars to never draw more than this
@@ -513,7 +513,16 @@ $("status-pill").addEventListener("click", () => $("connect").click());
 $("heart-connect").addEventListener("click", connectHeart);
 $("about-open").addEventListener("click", () => $("about").showModal());
 $("export-open").addEventListener("click", () => $("export").showModal());
-for (const dialog of document.querySelectorAll("dialog")) dialog.querySelector(".close").addEventListener("click", () => dialog.close());
+// A window closes from its cross, or from a click beside it. That click lands on the dialog itself,
+// like one in its padding, so its position tells them apart. Bluefy ignores closedby="any".
+for (const dialog of document.querySelectorAll("dialog")) {
+  dialog.querySelector(".close").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    const { left, right, top, bottom } = dialog.getBoundingClientRect();
+    const inside = left <= event.clientX && event.clientX <= right && top <= event.clientY && event.clientY <= bottom;
+    if (event.target === dialog && !inside) dialog.close();
+  });
+}
 onHold($("stop"), finish);
 onHold($("restart"), reset);
 $("autopause").addEventListener("click", () => setAutoPause(!autoPause));
