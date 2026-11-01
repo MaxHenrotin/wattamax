@@ -571,6 +571,9 @@ $("png").addEventListener("click", async () => saveFile(await recapImage(summary
 const resizes = new ResizeObserver(render);
 for (const canvas of document.querySelectorAll("canvas")) resizes.observe(canvas);
 
+// iPhone and iPad only show a button's :active state, its press, on a page listening to touches
+document.addEventListener("touchstart", () => {}, { passive: true });
+
 // Ask before closing the tab during a ride or on its summary, so a ride isn't lost before it's downloaded
 addEventListener("beforeunload", (event) => {
   if (ride.time > 0) event.preventDefault();

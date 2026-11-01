@@ -38,7 +38,7 @@ export default {
   elapsed: "gesamt",
   records: "Bestwerte der Einheit",
   maxRow: "Max",
-  export: "Nach Strava exportieren",
+  export: "Exportieren",
   exportTitle: "Nach Strava exportieren",
   pickDrawing: "Klicke auf eine Zeichnung, um deine Einheit herunterzuladen",
   downloadDrawing: "Einheit mit dieser Zeichnung herunterladen",
