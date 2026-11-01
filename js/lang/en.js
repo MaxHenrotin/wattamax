@@ -38,7 +38,7 @@ export default {
   elapsed: "total",
   records: "Ride bests",
   maxRow: "Max",
-  export: "Export",
+  export: "Export to Strava",
   exportTitle: "Export to Strava",
   pickDrawing: "Click a drawing to download your ride",
   downloadDrawing: "Download the ride with this drawing",

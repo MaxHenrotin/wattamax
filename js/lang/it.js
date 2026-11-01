@@ -38,7 +38,7 @@ export default {
   elapsed: "totale",
   records: "Record della sessione",
   maxRow: "Max",
-  export: "Esporta",
+  export: "Esporta su Strava",
   exportTitle: "Esporta su Strava",
   pickDrawing: "Clicca su un disegno per scaricare la tua sessione",
   downloadDrawing: "Scarica la sessione con questo disegno",
