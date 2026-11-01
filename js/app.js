@@ -418,6 +418,11 @@ function onHold(button, action) {
   button.addEventListener("keyup", (event) => { if (event.key === " " || event.key === "Enter") cancel(); });
 }
 
+// Counts a step as a page of its own in the host's anonymous visit count: /ride when a ride starts,
+// /export when its first file is saved. Vercel's free plan has no custom events, but counts pages.
+// Without its script (blocked, or on localhost), nothing is counted.
+const count = (path) => window.va?.("pageview", { path });
+
 async function keepScreenOn() {
   try { wakeLock = await navigator.wakeLock.request("screen"); } catch { /* not critical: the ride still records */ }
 }
@@ -426,7 +431,12 @@ async function connect() {
   message = "";
   $("connect").disabled = true;
   trainer = new Trainer(
-    (values) => { ride.update(values); renderLive(); },
+    (values) => {
+      const waiting = ride.state === "waiting";
+      ride.update(values);
+      if (waiting && ride.state === "riding") count("/ride");
+      renderLive();
+    },
     (connected) => { reconnecting = !connected; if (!connected) ride.pause(); renderLive(); },
   );
   try {
@@ -551,7 +561,9 @@ for (const name of [SUPPORT, ...Object.keys(DRAWINGS).filter((name) => name !== 
   tile.classList.toggle("support", name === SUPPORT);
   tile.addEventListener("click", async () => {
     await saveFile(await fit(ride, name), fileName("fit"));
-    $("drawings").querySelector(".saved")?.classList.remove("saved");
+    const saved = $("drawings").querySelector(".saved");
+    if (!saved) count("/export");
+    saved?.classList.remove("saved");
     tile.classList.add("saved");
   });
   $("drawings").append(tile);
