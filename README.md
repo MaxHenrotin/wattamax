@@ -28,7 +28,7 @@ I only wanted to see my watts on my Elite Suito, and paying for Zwift or Rouvy j
 - Lets you rearrange the screen on a computer: resize the cards, drag them around, and the numbers grow to fill the space.
 - Gives a realistic speed. Trainers report how fast their flywheel spins, which says little about your power, so the page simulates the speed you'd ride at on a flat road.
 - Exports the ride as a recap image and a FIT file that Strava files as a Virtual Ride. On the Strava map the ride traces a drawing of your choice across the Salar de Uyuni.
-- Keeps your data in your browser. There are no cookies and no third-party requests; the host only counts visits, anonymously.
+- Keeps your data in your browser. There are no cookies and no third-party requests; the host only counts visits, started rides and exports, anonymously (they show up as the pages /ride and /export in Vercel Analytics).
 
 It has only been tested with a Suito, but it should work with any trainer that supports Bluetooth FTMS, which covers most smart trainers sold in the last few years (Wahoo Kickr, Tacx Neo and Flux, Elite Direto and Justo, Saris H3...). Older Bluetooth trainers without FTMS, and Bluetooth power meters, go through the Cycling Power Service instead, which I haven't been able to test. The page is in English, French, German, Italian or Spanish. It picks your browser's language, and the flag at the top right switches to the next one on each click. Each language also has its own address, like [wattamax.com/de](https://wattamax.com/de).
 
