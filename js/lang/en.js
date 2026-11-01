@@ -64,7 +64,7 @@ export default {
   connectFailed: "Couldn't connect. Check that your trainer is on and close by, and that no other app (Zwift, Elite…) is connected to it, then try again.",
   heartFailed: "Couldn't connect to the heart rate strap. Check that you're wearing it with damp electrodes, then try again.",
   noData: "Nothing was recorded: the ride starts with your first pedal stroke.",
-  bluetoothBlocked: "Bluetooth unavailable: check that it's turned on on this device, then reload the page. If it already is, the device has no adapter, or the browser blocks Bluetooth (site settings, or a work computer).",
+  bluetoothBlocked: "Bluetooth unavailable: check that it's turned on, then reload the page. If it already is, the device has no adapter, or the browser blocks Bluetooth (site settings, or a work computer).",
   bluetoothIos: "On iPhone and iPad, Safari and the other browsers don't support Bluetooth. Install the free Bluefy app from the App Store and open this page in it.",
   bluetoothBrave: "Brave turns Bluetooth off by default. Copy brave://flags/#brave-web-bluetooth-api into the address bar, set the option to \"Enabled\" and restart Brave. You can also open this page in Google Chrome or Microsoft Edge.",
   bluetoothFirefox: "Firefox doesn't support Bluetooth. Open this page in Google Chrome or Microsoft Edge.",
