@@ -90,9 +90,10 @@ button.pill:enabled { cursor: pointer; }
 /* During a ride, the connection pill shrinks like the docked bubble: it counts as a round around
    its dot when the header decides to wrap, and grows into the room left, up to its text. It takes
    that room before the docked bubble, which only gets what the pill leaves. Its text goes to a
-   second line, out of sight, once less than 48 px of it would fit. */
+   second line, out of sight, once less than 48 px of it would fit, or less than all of a shorter
+   name like "SUITO". */
 body:not([data-screen="summary"]) .status { flex: 100 1 38px; flex-wrap: wrap; justify-content: center; align-content: flex-start; height: 38px; min-width: 38px; max-width: max-content; padding: 10px 14px; row-gap: 20px; overflow: hidden; line-height: 18px; }
-body:not([data-screen="summary"]) #status { flex: 1 1 48px; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+body:not([data-screen="summary"]) #status { flex: 1 1 48px; min-width: 0; max-width: max-content; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 /* The flag of the page's language, round; each click goes to the next language */
 .flag img { display: block; width: 22px; height: 22px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
 
