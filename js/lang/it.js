@@ -64,7 +64,7 @@ export default {
   connectFailed: "Connessione non riuscita. Controlla che il rullo sia acceso e vicinissimo, e che nessun'altra app (Zwift, Elite…) sia collegata, poi riprova.",
   heartFailed: "Connessione alla fascia cardio non riuscita. Controlla di indossarla, con gli elettrodi umidi, poi riprova.",
   noData: "Nessun dato registrato: la sessione parte alla prima pedalata.",
-  bluetoothBlocked: "Bluetooth non disponibile: questo dispositivo non ha un adattatore, oppure il browser lo blocca (impostazioni del sito o computer aziendale).",
+  bluetoothBlocked: "Bluetooth non disponibile: controlla che sia attivo su questo dispositivo, poi ricarica la pagina. Se lo è già, il dispositivo non ha un adattatore, oppure il browser blocca il Bluetooth (impostazioni del sito o computer aziendale).",
   bluetoothIos: "Su iPhone e iPad, Safari e gli altri browser non supportano il Bluetooth. Installa l'app gratuita Bluefy dall'App Store e apri questa pagina lì.",
   bluetoothBrave: "Brave disattiva il Bluetooth per impostazione predefinita. Copia brave://flags/#brave-web-bluetooth-api nella barra degli indirizzi, imposta l'opzione su «Enabled» e riavvia Brave. Puoi anche aprire questa pagina in Google Chrome o Microsoft Edge.",
   bluetoothFirefox: "Firefox non supporta il Bluetooth. Apri questa pagina in Google Chrome o Microsoft Edge.",

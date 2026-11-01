@@ -64,7 +64,7 @@ export default {
   connectFailed: "Verbindung fehlgeschlagen. Prüfe, ob der Rollentrainer eingeschaltet und ganz in der Nähe ist und keine andere App (Zwift, Elite…) mit ihm verbunden ist, und versuche es dann noch einmal.",
   heartFailed: "Verbindung zum Brustgurt fehlgeschlagen. Prüfe, ob du ihn trägst und die Elektroden feucht sind, und versuche es dann noch einmal.",
   noData: "Nichts aufgezeichnet: Die Einheit beginnt mit dem ersten Pedaltritt.",
-  bluetoothBlocked: "Bluetooth nicht verfügbar: Dieses Gerät hat keinen Adapter, oder der Browser blockiert ihn (Website-Einstellungen oder Firmencomputer).",
+  bluetoothBlocked: "Bluetooth nicht verfügbar: Prüfe, ob es auf diesem Gerät eingeschaltet ist, und lade dann die Seite neu. Ist es schon an, hat das Gerät keinen Adapter, oder der Browser blockiert Bluetooth (Website-Einstellungen oder Firmencomputer).",
   bluetoothIos: "Auf iPhone und iPad unterstützen Safari und die anderen Browser kein Bluetooth. Installiere die kostenlose App Bluefy aus dem App Store und öffne diese Seite darin.",
   bluetoothBrave: "Brave schaltet Bluetooth standardmäßig ab. Kopiere brave://flags/#brave-web-bluetooth-api in die Adressleiste, stelle die Option auf „Enabled“ und starte Brave neu. Du kannst diese Seite auch in Google Chrome oder Microsoft Edge öffnen.",
   bluetoothFirefox: "Firefox unterstützt kein Bluetooth. Öffne diese Seite in Google Chrome oder Microsoft Edge.",

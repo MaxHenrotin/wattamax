@@ -431,11 +431,10 @@ async function connect() {
   );
   try {
     await trainer.connect();
-  } catch (error) {
-    // NotFoundError means the person closed the device picker
-    if (error.name !== "NotFoundError") {
-      message = "connectFailed";
-    }
+  } catch {
+    // Without a device, the person closed the picker without choosing one. Chrome says so with a
+    // NotFoundError, Bluefy with another error, so the device tells it rather than the error.
+    if (trainer.device) message = "connectFailed";
   } finally {
     $("connect").disabled = false;
   }
@@ -460,10 +459,8 @@ async function connectHeart() {
   renderLive();
   try {
     await heart.connect();
-  } catch (error) {
-    if (error.name !== "NotFoundError") {
-      message = "heartFailed";
-    }
+  } catch {
+    if (heart.device) message = "heartFailed";
     heart = null;
   }
   renderLive();

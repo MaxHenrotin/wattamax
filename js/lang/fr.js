@@ -64,7 +64,7 @@ export default {
   connectFailed: "Connexion impossible. Vérifie que le home-trainer est allumé et tout près, et qu'aucune autre app (Zwift, Elite…) n'y est connectée, puis réessaie.",
   heartFailed: "Connexion à la ceinture cardio impossible. Vérifie que tu la portes, électrodes humides, puis réessaie.",
   noData: "Aucune donnée enregistrée : la séance démarre au premier coup de pédale.",
-  bluetoothBlocked: "Bluetooth indisponible : cet appareil n'a pas d'adaptateur, ou le navigateur le bloque (paramètres du site, ou ordinateur d'entreprise).",
+  bluetoothBlocked: "Bluetooth indisponible : vérifie qu'il est activé sur cet appareil, puis recharge la page. S'il l'est déjà, l'appareil n'a pas d'adaptateur, ou le navigateur bloque le Bluetooth (paramètres du site, ou ordinateur d'entreprise).",
   bluetoothIos: "Sur iPhone et iPad, Safari et les autres navigateurs ne gèrent pas le Bluetooth. Installe l'app gratuite Bluefy depuis l'App Store et ouvre cette page dedans.",
   bluetoothBrave: "Brave coupe le Bluetooth par défaut. Copie brave://flags/#brave-web-bluetooth-api dans la barre d'adresse, passe l'option sur « Enabled » et relance Brave. Tu peux aussi ouvrir cette page dans Google Chrome ou Microsoft Edge.",
   bluetoothFirefox: "Firefox ne gère pas le Bluetooth. Ouvre cette page dans Google Chrome ou Microsoft Edge.",
