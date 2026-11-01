@@ -47,7 +47,7 @@ export default {
   openStrava: "Apri Strava",
   addImage: "Se vuoi, aggiungi l'immagine del riepilogo alla tua attività",
   downloadImage: "Scarica l'immagine",
-  holdToRestart: "Tieni premuto per ricominciare",
+  holdToClose: "Tieni premuto per chiudere",
 
   zone1: "Recupero",
   zone2: "Resistenza",

@@ -47,7 +47,7 @@ export default {
   openStrava: "Strava öffnen",
   addImage: "Wenn du magst, füge das Bild der Zusammenfassung zu deiner Aktivität hinzu",
   downloadImage: "Bild herunterladen",
-  holdToRestart: "Zum Neustart gedrückt halten",
+  holdToClose: "Zum Schließen gedrückt halten",
 
   zone1: "Regeneration",
   zone2: "Ausdauer",
