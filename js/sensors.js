@@ -81,11 +81,10 @@ class Sensor {
   }
 
   async connect() {
-    const services = this.protocols.map(({ service }) => service);
-    this.device = await navigator.bluetooth.requestDevice({
-      filters: services.map((service) => ({ services: [service] })),
-      optionalServices: services,  // a device listed for one service may still be read through another
-    });
+    // A device listed for one service can still be read through another: browsers allow every
+    // service of every filter. Bluefy rejects optionalServices, so it isn't used.
+    const filters = this.protocols.map(({ service }) => ({ services: [service] }));
+    this.device = await navigator.bluetooth.requestDevice({ filters });
     await this.#subscribe();
     this.active = true;
     this.device.addEventListener("gattserverdisconnected", () => this.#reconnect());
