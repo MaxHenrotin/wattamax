@@ -75,7 +75,7 @@ export default {
   dock: "Benachrichtigung verkleinern",
   close: "Schließen",
   about: "Über Wattamax",
-  aboutText: "Wattamax zeigt beim Fahren die Leistung, die Trittfrequenz und die Geschwindigkeit deines Rollentrainers an, und deine Herzfrequenz, wenn du einen Bluetooth-Brustgurt trägst. Es ist kostenlos, ohne Konto und ohne Werbung. Ich habe es für meinen Elite Suito gemacht. Andere FTMS-kompatible Rollentrainer sollten auch funktionieren, aber ich konnte sie nicht testen.",
+  aboutText: "Wattamax zeigt beim Fahren die Leistung, die Trittfrequenz und die Geschwindigkeit deines Rollentrainers an, und deine Herzfrequenz, wenn du einen Bluetooth-Brustgurt trägst. Es ist kostenlos, ohne Konto und ohne Werbung. Ich habe es für meinen Elite Suito gemacht. Andere Rollentrainer mit Bluetooth FTMS oder Cycling Power sollten auch funktionieren, ebenso ein Bluetooth-Powermeter, aber ich konnte sie nicht testen.",
   data: "Deine Daten",
   dataText: "Deine Daten verlassen dein Gerät nicht. Dein Gewicht, deine FTP und deine Einstellungen bleiben in deinem Browser, und deine Einheiten gibt es nur in den Dateien, die du herunterlädst. Es gibt keine Cookies, und die Seite kontaktiert keine andere Website: Die Schriften und der Code kommen von wattamax.com. Damit ich weiß, wie viele Leute Wattamax nutzen, zählt der Hoster (Vercel) nur die Besuche, anonym. Wie bei jeder Website speichert er außerdem technische Protokolle mit der IP-Adresse und der aufgerufenen Seite.",
   warranty: "Ohne Gewähr",

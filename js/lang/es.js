@@ -75,7 +75,7 @@ export default {
   dock: "Minimizar la notificación",
   close: "Cerrar",
   about: "Acerca de",
-  aboutText: "Wattamax muestra la potencia, la cadencia y la velocidad de tu rodillo mientras pedaleas, y tu frecuencia cardíaca si llevas una banda de pulso Bluetooth. Es gratis, sin cuenta y sin anuncios. Lo hice para mi Elite Suito. Los demás rodillos compatibles con FTMS también deberían funcionar, pero no he podido probarlos.",
+  aboutText: "Wattamax muestra la potencia, la cadencia y la velocidad de tu rodillo mientras pedaleas, y tu frecuencia cardíaca si llevas una banda de pulso Bluetooth. Es gratis, sin cuenta y sin anuncios. Lo hice para mi Elite Suito. Los demás rodillos con Bluetooth FTMS o Cycling Power también deberían funcionar, igual que un medidor de potencia Bluetooth, pero no he podido probarlos.",
   data: "Tus datos",
   dataText: "Tus datos no salen de tu dispositivo. Tu peso, tu FTP y tus ajustes se quedan en tu navegador, y tus sesiones solo existen en los archivos que descargas. No hay cookies y la página no contacta con ningún otro sitio: las fuentes y el código vienen de wattamax.com. Para que yo sepa cuánta gente usa Wattamax, el alojamiento (Vercel) solo cuenta las visitas, de forma anónima. Como cualquier sitio web, también guarda registros técnicos con la dirección IP y la página solicitada.",
   warranty: "Sin garantía",

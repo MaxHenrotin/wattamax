@@ -75,7 +75,7 @@ export default {
   dock: "Minimise the notification",
   close: "Close",
   about: "About",
-  aboutText: "Wattamax shows your trainer's power, cadence and speed while you ride, and your heart rate if you wear a Bluetooth strap. It's free, with no account and no ads. I made it for my Elite Suito. Other FTMS trainers should work too, but I haven't been able to test them.",
+  aboutText: "Wattamax shows your trainer's power, cadence and speed while you ride, and your heart rate if you wear a Bluetooth strap. It's free, with no account and no ads. I made it for my Elite Suito. Other trainers with Bluetooth FTMS or Cycling Power should work too, and so should a Bluetooth power meter, but I haven't been able to test them.",
   data: "Your data",
   dataText: "Your data never leaves your device. Your weight, FTP and settings stay in your browser, and your rides only exist in the files you download. There are no cookies, and the page doesn't contact any other site: the fonts and the code come from wattamax.com. So that I know how many people use Wattamax, the host (Vercel) only counts visits, anonymously. Like any website, it also keeps technical logs with the IP address and the page requested.",
   warranty: "No warranty",

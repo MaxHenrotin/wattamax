@@ -75,7 +75,7 @@ export default {
   dock: "Riduci la notifica",
   close: "Chiudi",
   about: "Informazioni",
-  aboutText: "Wattamax mostra la potenza, la cadenza e la velocità del tuo rullo mentre pedali, e la tua frequenza cardiaca se indossi una fascia cardio Bluetooth. È gratuito, senza account e senza pubblicità. L'ho fatto per il mio Elite Suito. Anche gli altri rulli compatibili FTMS dovrebbero funzionare, ma non ho potuto provarli.",
+  aboutText: "Wattamax mostra la potenza, la cadenza e la velocità del tuo rullo mentre pedali, e la tua frequenza cardiaca se indossi una fascia cardio Bluetooth. È gratuito, senza account e senza pubblicità. L'ho fatto per il mio Elite Suito. Anche gli altri rulli con Bluetooth FTMS o Cycling Power dovrebbero funzionare, così come un misuratore di potenza Bluetooth, ma non ho potuto provarli.",
   data: "I tuoi dati",
   dataText: "I tuoi dati non lasciano il tuo dispositivo. Il tuo peso, la tua FTP e le tue impostazioni restano nel tuo browser, e le tue sessioni esistono solo nei file che scarichi. Non ci sono cookie e la pagina non contatta nessun altro sito: i font e il codice vengono da wattamax.com. Per farmi sapere quante persone usano Wattamax, l'hosting (Vercel) conta solo le visite, in modo anonimo. Come ogni sito, conserva anche dei log tecnici con l'indirizzo IP e la pagina richiesta.",
   warranty: "Nessuna garanzia",

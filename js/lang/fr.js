@@ -75,7 +75,7 @@ export default {
   dock: "Réduire la notification",
   close: "Fermer",
   about: "À propos",
-  aboutText: "Wattamax affiche la puissance, la cadence et la vitesse de ton home-trainer pendant que tu roules, et ta fréquence cardiaque si tu portes une ceinture Bluetooth. C'est gratuit, sans compte et sans pub. Je l'ai fait pour mon Elite Suito. Les autres home-trainers compatibles FTMS devraient marcher aussi, mais je n'ai pas pu les tester.",
+  aboutText: "Wattamax affiche la puissance, la cadence et la vitesse de ton home-trainer pendant que tu roules, et ta fréquence cardiaque si tu portes une ceinture Bluetooth. C'est gratuit, sans compte et sans pub. Je l'ai fait pour mon Elite Suito. Les autres home-trainers Bluetooth compatibles FTMS ou Cycling Power devraient marcher aussi, de même qu'un capteur de puissance Bluetooth, mais je n'ai pas pu les tester.",
   data: "Tes données",
   dataText: "Tes données ne quittent pas ton appareil. Ton poids, ton FTP et tes réglages restent dans ton navigateur, et tes séances n'existent que dans les fichiers que tu télécharges. Il n'y a pas de cookies, et la page ne contacte aucun autre site : les polices et le code viennent de wattamax.com. Pour que je sache combien de gens utilisent Wattamax, l'hébergeur (Vercel) compte uniquement les visites, de façon anonyme. Comme pour tout site, il garde aussi des journaux techniques avec l'adresse IP et la page demandée.",
   warranty: "Sans garantie",
