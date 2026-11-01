@@ -514,14 +514,17 @@ $("heart-connect").addEventListener("click", connectHeart);
 $("about-open").addEventListener("click", () => $("about").showModal());
 $("export-open").addEventListener("click", () => $("export").showModal());
 // A window closes from its cross, or from a click beside it. That click lands on the dialog itself,
-// like one in its padding, so its position tells them apart. Bluefy ignores closedby="any".
+// like one in its padding, so its position tells them apart. The press must start beside it too, so
+// selecting text and letting go outside keeps it open. Bluefy ignores closedby="any".
 for (const dialog of document.querySelectorAll("dialog")) {
-  dialog.querySelector(".close").addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
+  const beside = (event) => {
     const { left, right, top, bottom } = dialog.getBoundingClientRect();
-    const inside = left <= event.clientX && event.clientX <= right && top <= event.clientY && event.clientY <= bottom;
-    if (event.target === dialog && !inside) dialog.close();
-  });
+    return event.target === dialog && !(left <= event.clientX && event.clientX <= right && top <= event.clientY && event.clientY <= bottom);
+  };
+  let pressedBeside = false;
+  dialog.querySelector(".close").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("pointerdown", (event) => { pressedBeside = beside(event); });
+  dialog.addEventListener("click", (event) => { if (pressedBeside && beside(event)) dialog.close(); });
 }
 onHold($("stop"), finish);
 onHold($("restart"), reset);
