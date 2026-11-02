@@ -348,8 +348,9 @@ dialog h2 { margin: 0 0 12px; font-size: 24px; font-weight: 600; }
 .steps h3 { display: flex; gap: 10px; margin: 0 0 12px; font-size: 17px; font-weight: 600; line-height: 1.35; }
 .steps h3::before { content: counter(step); flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--strava); color: var(--card); font-size: 13px; }
 .steps .optional h3::before { background: var(--z1); }
-/* The Strava button looks idle until a file is saved, but works all the same */
-.export:not(:has(.saved)) .strava { opacity: 0.4; }
+/* The Strava button stays greyed out and ignores clicks until a file is saved, so nobody leaves
+   for Strava before the ride is downloaded */
+.export:not(:has(.saved)) .strava { opacity: 0.4; pointer-events: none; }
 /* The drawings: the supporting one across the whole width, then the others in centred rows of
    --columns drawings, which app.js works out from --tile, the smallest a drawing may be. Two rows
    of drawings stop growing at 150 px, so the window stays low. */
